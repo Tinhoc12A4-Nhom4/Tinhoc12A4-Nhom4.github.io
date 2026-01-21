@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trăng Việt - Trang Chủ</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="home.css">
+  <style>
+    :root {
+      /* Màu sắc chính */
+      --primary-red: #5b0f0f;
+      --secondary-red: #8b1e1e;
+      --dark-red: #3b1212;
+      --darker-red: #2a0a0a;
+      --gold: #d39b2b;
+      --light-gold: #ffd27a;
+      --cream: #ffe9c9;
+      --white: #ffffff;
+  
+      /* Kích thước */
+      --spacing: 18px;
+      --border-radius: 8px;
+      --container-width: 1100px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--primary-red);
+      color: var(--white);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .layout {
+      display: flex;
+      gap: var(--spacing);
+      max-width: 1150px;
+      margin: var(--spacing) auto;
+      padding: 0 12px;
+      flex: 1;
+    }
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container cho pháo hoa */
+        .fireworks-intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #000;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .fireworks-intro.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Canvas cho pháo hoa */
+        #fireworks-canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Thông báo chào mừng */
+        .welcome-message {
+            color: white;
+            text-align: center;
+            z-index: 10000;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            max-width: 90%;
+            margin-bottom: 20px;
+        }
+
+        .welcome-message h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #ff5e62, #ff9966);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .welcome-message p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Nút bỏ qua */
+        #skip-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10000;
+        }
+
+        #skip-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+        }
+
+        /* Đếm ngược */
+        .countdown {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            z-index: 10000;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Phần pháo hoa chào mừng -->
+    <div class="fireworks-intro" id="fireworks-intro">
+        <canvas id="fireworks-canvas"></canvas>
+        <div class="welcome-message">
+            <h1>Chào mừng!</h1>
+            <p>Trang web sẽ hiển thị sau khi màn pháo hoa kết thúc</p>
+        </div>
+        <button id="skip-btn">Bỏ qua pháo hoa</button>
+        <div class="countdown" id="countdown">10 giây</div>
+    </div>
+    
+    <!-- Nội dung chính của trang web -->
+    <header id="header">
+  <div class="container">
+    <h1 class="brand">TRĂNG VIỆT</h1>
+    <p class="tag">Báo tường nhóm 4 - Lớp 12A4 Tin Học</p>
+  </div>
+</header>
+<div class="layout">
+
+  <!-- Menu -->
+  <aside id="sidebar" class="sidebar" aria-label="Điều hướng chính">
+    <div class="menu-top">
+      <img src="Logo.jpg" alt="logo" class="logo">
+      <p class="small">TRĂNG VIỆT</p>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#gioithieu">Giới thiệu</a></li>
+        <li class="has-dropdown">
+          <a href="#" class="drop-toggle">Bài viết ▾</a>
+
+          <!-- dropdown box (nằm ngang sang phải của sidebar) -->
+          <div class="dropdown" role="menu" aria-label="Bài viết">
+            <div class="drop-inner">
+
+              <div class="drop-item">
+                <img src="lichsu.png" alt="thumb5">
+                <div class="drop-text">
+                  <a href="Trangcon5.html">Tết Trung thu: Nguồn gốc và ý nghĩa tại Việt Nam</a>
+                  <p>Tại sao Trung Thu lại quan trọng đối với chúng ta??</p>
+                </div>
+              </div>
+
+              <div class="drop-item">
+                <img src="hangnga.png" alt="thumb1">
+                <div class="drop-text">
+                  <a href="Trangcon1.html">Sự tích chị Hằng Nga</a>
+                  <p>Hằng Nga tại sao lại ở cung trăng?? Và phong tục "bái nguyệt"</p>
+                </div>
+              </div>
+
+              <div class="drop-item">
+                <img src="monan1.jpg" alt="thumb2">
+                <div class="drop-text">
+                  <a href="Trangcon2.html">Trung Thu ăn gì? Các món ăn vào dịp Trung Thu nên ăn</a>
+                  <p>Những món ăn truyền thống và ý nghĩa...</p>
+                </div>
+              </div>
+
+              <div class="drop-item">
+                <img src="longden.png" alt="thumb3">
+                <div class="drop-text">
+                  <a href="Trangcon3.html">Cách làm đèn ông sao đơn giản</a>
+                  <p>Hướng dẫn làm thủ công đèn tại nhà</p>
+                </div>
+              </div>
+
+              <div class="drop-item">
+                <img src="mualan5.png" alt="thumb4">
+                <div class="drop-text">
+                  <a href="Trangcon4.html">Lân Sư Rồng: Từ truyền thuyết đến hành trình di sản văn hóa</a>
+                  <p>Múa lân – sư – rồng là một trong những loại hình...</p>
+                </div>
+              </div>
+
+              <div class="drop-item">
+                <img src="chucuoi1.png" alt="thumb6">
+                <div class="drop-text">
+                  <a href="Trangcon6.html">Sự tích chú Cuội cung trăng</a>
+                  <p>Vì sao hằng đêm khi nhìn lên trăng lại thấy như có người ngồi dưới cây đa?</p>
+                </div>
+              </div>
+
+              <div class="drop-item">
+                <img src="hoangde1.png" alt="thumb7">
+                <div class="drop-text">
+                  <a href="Trangcon7.html">Trung thu của hoàng đế Càn Long</a>
+                  <p>Mỗi dịp Trung thu, vua Càn Long thời Thanh, Trung Quốc thường làm gì?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li><a href="gallery.html">Thư viện ảnh</a></li>
+        <li><a href="media.html">Âm nhạc / Video</a></li>
+        <li><a href="comments.html">Góc bình luận</a></li>
+        <li><a href="#email-footer">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-foot">Cập nhật: <time datetime="2026-01-18">18-01-2026</time></div>
+  </aside>
+
+  <!-- MAIN CAPTION -->
+  <main id="main">
+
+    <!-- Hero lớn (ảnh tham khảo) -->
+    <section class="hero">
+      <img src="Header-image2.jpg" alt="Trung Thu" class="hero-img">
+      <div class="hero-text">
+        <h2>Trung Thu - Sắc Trăng Đất Việt</h2>
+        <p>Ánh trăng, đèn lồng, bánh nướng — gợi nhớ ký ức tuổi thơ và gia đình...</p>
+      </div>
+    </section>
+
+    <!-- Giới thiệu -->
+    <section id="gioithieu" class="panel">
+      <h3>Giới thiệu</h3>
+      <p>Trăng Việt là không gian số đầy tâm huyết của Nhóm 4 (12A4), nơi kết nối công nghệ hiện đại với nét đẹp Tết Trung thu truyền thống qua giao diện đỏ vàng ấm cúng và đầy sức sống.</p> 
+      <br>
+      <p>Tại đây, bạn sẽ được khám phá các truyền thuyết kinh điển về Chị Hằng, Chú Cuội, hòa mình vào không khí náo nhiệt của lễ hội múa Lân - Sư - Rồng và tìm hiểu những ý nghĩa nhân văn sâu sắc của ngày Tết Đoàn viên.</p>
+      <br>
+      <p>Không chỉ dừng lại ở kiến thức, trang web còn gợi lại hương vị tuổi thơ với các món bánh nướng, bánh dẻo đặc trưng, hướng dẫn làm đèn ông sao thủ công và tái hiện tất cả qua kho hình ảnh, video diễu hành rực rỡ. Đây chính là điểm đến trọn vẹn để lưu giữ ký ức và lan tỏa cảm hứng về một mùa Trung Thu ý nghĩa đến với mọi người.</p>
+
+    </section>
+
+    <!-- Bài viết (2 cột bằng float) -->
+    <section id="baiviet" class="panel">
+      <h3>Bài viết nổi bật</h3>
+      <article class="post">
+        <a href="Trangcon5.html">Tết Trung thu: Nguồn gốc và ý nghĩa tại Việt Nam</a>
+        <p class="meta">Tác giả: <b class="author">Lê Chu Trịnh</b></p>
+        <p>Nguồn gốc của Tết Trung thu bắt đầu từ văn hóa Trung Quốc và đã trải qua hơn 3,000 năm lịch sử. Vào thời nhà Chu (1045 - 221 TCN),...</p>
+      </article>
+
+      <article class="post">
+        <a href="Trangcon1.html">Sự tích: Chị Hằng Nga ở cung trăng</a>
+        <p class="meta">Tác giả: <b class="author">Dân gian</b></p>
+        <p>Tương truyền, vào thời xa xưa, trên trời xuất hiện mười ông mặt trời, cùng chiếu xuống mặt đất nóng đến bốc khói, biển hồ khô cạn...</p>
+      </article>
+    </section>
+
+    <!-- Góc ảnh -->
+    <section id="hinhanh" class="panel">
+      <div class="section-header">
+        <h3>Những tấm ảnh đẹp về Trung Thu</h3>
+        <a href="gallery.html" class="view-more-btn">Xem thêm ảnh →</a>
+      </div>
+      
+      <div class="gallery">
+        <figure class="gallery-item">
+          <img src="gallery1.jpg" alt="Đèn lồng"/>
+          <figcaption>Đèn lồng Trung Thu</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="gallery2.jpg" alt="Bánh nướng"/>
+          <figcaption>Bánh Trung Thu</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="gallery3.jpg" alt="Trăng rằm"/>
+          <figcaption>Trăng đêm Trung Thu</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="gallery4.jpg" alt="Mâm cỗ"/>
+          <figcaption>Mâm cỗ đoàn viên</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Góc âm nhạc / video -->
+    <section id="amnhac" class="panel">
+      <h3>Âm nhạc / Video về Trung Thu</h3>
+      <audio controls>
+        <source src="nhactrungthu.mp3" type="audio/mpeg">
+      </audio>
+      <p></p>
+      <video controls width="520">
+        <source src="ruocdentrungthu.mp4" type="video/mp4">
+      </video>
+    </section>
+
+    <!-- Góc bình luận -->
+    <section id="binhluan" class="panel">
+      <div class="section-header">
+        <h3>Góc bình luận</h3>
+           <a href="comments.html" class="view-more-btn">Xem tất cả bình luận →</a>
+      </div>
+      <form class="comment-form" id="comment-form" action="#" method="post" onsubmit="alert('Cảm ơn!');return false;">
+        <label for="name">Họ và tên</label>
+        <input id="name" name="name" type="text" required placeholder="Nhập họ tên">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="email@example.com">
+
+        <label for="message">Bình luận</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Viết bình luận..."></textarea>
+
+        <button type="submit" class="btn">Gửi bình luận</button>
+      </form>
+    </section>
+
+  </main>
+
+</div>
+
+<!-- FOOTER -->
+<footer id="footer">
+      <div class="container footer-grid footer-email">
+      <div >
+        <h3>Thông tin nhóm</h3>
+        <p class="group">Nhóm: 4 - Tin Học 12A4| Giáo viên: Thầy Kháng</p>
+        <p class="group footer-email">Đại diện nhóm: <strong>Phạm Bảo Anh</strong> - email: <a href="mailto:baoanh210808@gmail.com">baoanh210808@gmail.com</a></p>
+      </div>
+
+      <div>
+        <h3>Cập nhật</h3>
+        <p class="group">Ngày cập nhật gần nhất: <time datetime="2026-01-18">18-01-2026</time></p>
+        <p class="group">Nguồn tham khảo: Truyền thuyết dân gian, sách báo, và Internet (nếu có trích dẫn cụ thể sẽ ghi rõ).</p>
+      </div>
+
+      <div>
+        <h3>Liên hệ</h3>
+        <form action="#" onsubmit="alert('Email của bạn đã được gửi đi!'); return false;">
+          <label class="group" for="email-footer">Email liên hệ</label>
+          <input id="email-footer" type="email" placeholder="email@nhom12a.edu.vn" required>
+          <button class="btn" type="submit">Gửi</button>
+        </form>
+      </div>
+    </div>
+  <div class="container Lmao">© 2026 TRĂNG RẰM - Lớp 12 Tin Học</div>
+</footer>
+
+    <!-- Script pháo hoa đơn giản -->
+    <script src="fireworks.js"></script>
+    
+    <!-- Script điều khiển hiển thị -->
+    <script>
+        // Biến toàn cục
+        let fireworksActive = true;
+        let countdown = 10; // 10 giây
+        let countdownInterval;
+        
+        // DOM Elements
+        const fireworksIntro = document.getElementById('fireworks-intro');
+        const websiteContent = document.getElementById('website-content');
+        const skipBtn = document.getElementById('skip-btn');
+        const countdownElement = document.getElementById('countdown');
+        
+        // Hàm chuyển sang trang web
+        function showWebsite() {
+            if (!fireworksActive) return;
+            
+            fireworksActive = false;
+            clearInterval(countdownInterval);
+            
+            // Ẩn phần pháo hoa
+            fireworksIntro.classList.add('hidden');
+            
+            // Dừng hiệu ứng pháo hoa
+            if (typeof stopFireworks === 'function') {
+                stopFireworks();
+            }
+            
+            // Hiển thị nội dung trang web
+            setTimeout(() => {
+                websiteContent.classList.add('show');
+                // Ẩn hoàn toàn phần pháo hoa sau khi fade out
+                setTimeout(() => {
+                    fireworksIntro.style.display = 'none';
+                }, 1000);
+            }, 500);
+        }
+        
+        // Hàm bắt đầu đếm ngược
+        function startCountdown() {
+            countdownElement.textContent = `${countdown} giây`;
+            
+            countdownInterval = setInterval(() => {
+                countdown--;
+                countdownElement.textContent = `${countdown} giây`;
+                
+                if (countdown <= 0) {
+                    clearInterval(countdownInterval);
+                    showWebsite();
+                }
+            }, 1000);
+        }
+        
+        // Sự kiện khi nhấn nút bỏ qua
+        skipBtn.addEventListener('click', showWebsite);
+        
+        // Khởi tạo khi trang tải xong
+        window.addEventListener('load', () => {
+            // Bắt đầu pháo hoa
+            if (typeof initFireworks === 'function') {
+                initFireworks();
+            }
+            
+            // Bắt đầu đếm ngược
+            startCountdown();
+        });
+    </script>
+</body>
+</html>

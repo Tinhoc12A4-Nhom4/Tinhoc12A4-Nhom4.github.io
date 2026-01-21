@@ -1,0 +1,252 @@
+/* ===== COMMON.CSS ===== */
+/* Style dùng chung cho cả trang chủ và trang con */
+
+/* === RESET & BASE === */
+* { 
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+/* === LAYOUT CHUNG === */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* === HEADER CHUNG === */
+#header {
+  background: linear-gradient(var(--secondary-red), var(--primary-red));
+  padding: var(--spacing) 0;
+  border-bottom: 4px solid var(--gold);
+}
+
+/* Logo và tiêu đề chung */
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-content .logo {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.brand {
+  color: var(--light-gold);
+  font-size: 1.6rem;
+  margin: 0 0 4px 0;
+  line-height: 1.2;
+}
+
+#header p {
+  margin: 0;
+  color: var(--cream);
+  font-size: 0.95rem;
+}
+
+/* === MENU NGANG (DÙNG CHUNG) === */
+.menu-ngang {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  border-radius: var(--border-radius);
+  margin-top: var(--spacing);
+}
+
+.menu-ngang ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-ngang a {
+  color: var(--cream);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.menu-ngang a:hover {
+  background: rgba(211, 155, 43, 0.3);
+  transform: translateY(-2px);
+}
+
+/* === FORM CHUNG === */
+.comment-form {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  margin-top: 1rem;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: var(--cream);
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid var(--gold);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+  border-color: var(--light-gold);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid rgba(211, 155, 43, 0.3);
+  outline-offset: 2px;
+}
+
+.btn {
+  background: var(--gold);
+  color: #1b0b0b;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+  font-size: 1rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn:hover {
+  background: var(--light-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* === FOOTER CHUNG === */
+#footer {
+  background: var(--darker-red);
+  padding: var(--spacing) 0;
+  margin-top: auto;
+  border-top: 4px solid var(--gold);
+  color: var(--light-gold);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: var(--spacing);
+}
+
+.footer-grid h3 {
+  color: var(--light-gold);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.group {
+  margin-bottom: 0.8rem;
+  color: var(--cream);
+  line-height: 1.5;
+}
+
+.Lmao {
+  text-align: center;
+  padding-top: var(--spacing);
+  border-top: 1px solid rgba(211, 155, 43, 0.3);
+  color: var(--cream);
+  font-size: 0.9rem;
+}
+
+.footer-email a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-email a:hover {
+  color: #ffb347;
+}
+
+/* === CLASS TIỆN ÍCH === */
+.text-center { text-align: center; }
+.mt-1 { margin-top: 10px; }
+.mb-1 { margin-bottom: 10px; }
+.d-flex { display: flex; }
+.flex-column { flex-direction: column; }
+.align-center { align-items: center; }
+.justify-center { justify-content: center; }
+.w-100 { width: 100%; }
+
+/* === RESPONSIVE CHUNG === */
+@media (max-width: 900px) {
+  .layout {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  
+  .menu-ngang ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .menu-ngang ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .menu-ngang a {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}

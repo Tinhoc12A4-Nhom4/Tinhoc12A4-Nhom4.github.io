@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sự tích chú Cuội - Trăng Việt</title>
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="article.css">
+  <style>
+    :root {
+      /* Màu sắc chính */
+      --primary-red: #5b0f0f;
+      --secondary-red: #8b1e1e;
+      --dark-red: #3b1212;
+      --darker-red: #2a0a0a;
+      --gold: #d39b2b;
+      --light-gold: #ffd27a;
+      --cream: #ffe9c9;
+      --white: #ffffff;
+  
+      /* Kích thước */
+      --spacing: 18px;
+      --border-radius: 8px;
+      --container-width: 1100px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--primary-red);
+      color: var(--white);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .layout {
+      display: flex;
+      gap: var(--spacing);
+      max-width: 1150px;
+      margin: var(--spacing) auto;
+      padding: 0 12px;
+      flex: 1;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Header đã sửa -->
+<header id="header">
+  <div class="container">
+    <div class="header-content">
+      <img src="Logo.jpg" alt="logo Trăng Việt" class="logo">
+      <div class="header-text">
+        <h1 class="brand">TRĂNG VIỆT</h1>
+        <p>Báo tường nhóm 4 - Lớp 12A4 Tin Học</p>
+      </div>
+    </div>
+    
+    <nav class="menu-ngang" aria-label="Chính">
+      <ul>
+        <li><a href="Trangchu.html">Trang chủ</a></li>
+         <li class="nav-dropdown">
+      <a href="#articles" class="nav-dropdown-toggle">
+        Bài viết
+      </a>
+      
+      <!-- Dropdown hướng xuống -->
+      <div class="nav-dropdown-menu">
+        <div class="nav-dropdown-inner">
+          <a href="Trangcon1.html" class="dropdown-item">
+            <span class="item-icon">📖</span>
+            <span class="item-text">
+              <strong>Sự tích Chị Hằng Nga</strong>
+              <small>Hằng Nga tại sao lại ở cung trăng??</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon2.html" class="dropdown-item">
+            <span class="item-icon">🥮</span>
+            <span class="item-text">
+              <strong>Trung Thu ăn gì?</strong>
+              <small>Những món ăn truyền thống và ý nghĩa...</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon3.html" class="dropdown-item">
+            <span class="item-icon">🏮</span>
+            <span class="item-text">
+              <strong>Làm đèn ông sao</strong>
+              <small>Hướng dẫn thủ công</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon5.html" class="dropdown-item">
+            <span class="item-icon">📜</span>
+            <span class="item-text">
+              <strong>Lịch sử Tết Trung Thu</strong>
+              <small>Nguồn gốc và ý nghĩa</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon4.html" class="dropdown-item">
+            <span class="item-icon">🎏</span>
+            <span class="item-text">
+              <strong>Lân sư rồng</strong>
+              <small>Múa lân – sư – rồng là một trong những...</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon7.html" class="dropdown-item">
+            <span class="item-icon">👑</span>
+            <span class="item-text">
+              <strong>Trung thu của hoàng đế</strong>
+              <small>Mỗi dịp Trung thu, vua Càn Long thời Thanh...</small>
+            </span>
+          </a>
+        </div>
+      </div>
+    </li>
+        <li><a href="gallery.html">Thư viện ảnh</a></li>
+        <li><a href="media.html">Âm nhạc/Video</a></li>
+        <li><a href="comments.html">Bình luận</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Breadcrumb -->
+<div class="container breadcrumb">
+  <a href="Trangchu.html">Trang chủ</a> › 
+  <span>Sự tích chú Cuội</span>
+</div>
+
+<!-- Main content -->
+<div class="layout">
+  <main class="main-article">
+    <article>
+      <header class="article-header">
+        <h1 class="article-title">Sự tích chú Cuội cung trăng</h1>
+        <div class="article-meta">
+          <span> Ngày đăng: 27-09-2023</span>
+          <span> Tác giả: Khi nào cây héo đổi tên</span>
+          <span> Thời gian đọc: 5 phút</span>
+        </div>
+      </header>
+      
+      <div class="article-content">
+        <p>Câu chuyện kể về anh chàng tiều phu tên là Cuội. Trong một lần vào rừng đốn củi, Cuội tình cờ phát hiện ra một hang cọp và đã ra tay hạ gục bốn con cọp con. Ngay lúc đó, cọp mẹ trở về, khiến Cuội hốt hoảng vứt rìu leo tót lên ngọn cây cao để trốn.</p>
+        <p>Từ trên cao nhìn xuống, Cuội kinh ngạc chứng kiến cảnh cọp mẹ đi đến một bụi cây gần đó, nhai lá rồi mớm cho con. Chỉ sau vài phút, bốn con cọp con đang nằm bất động bỗng sống lại và vẫy đuôi như thường. Đợi cọp mẹ tha con đi nơi khác, Cuội đã xuống đào gốc cây thuốc quý đó mang về nhà.</p>
+        <figure class="article-image">
+          <img src="chucuoi1.png" alt="Hình ảnh Chú Cuội">
+          <figcaption>Hình ảnh minh họa Sự tích Chú Cuội cung trăng</figcaption>
+        </figure>
+        <p>Trên đường về, Cuội dùng lá quý cứu sống một ông lão ăn mày. Ông lão cho biết đây là cây có phép "cải tử hoàn sinh" và dặn Cuội phải tưới bằng nước sạch, nếu không cây sẽ bay lên trời. Cuội mang cây về trồng, hàng ngày chăm sóc cẩn thận và dùng lá cây cứu giúp được rất nhiều người, thậm chí cứu sống cả một con chó chết trôi.</p>
+        <p>Sau đó, Cuội còn cứu sống con gái của một lão nhà giàu và được ông gả cô gái cho làm vợ. Hai vợ chồng đang sống hạnh phúc thì một lần Cuội đi vắng, bọn giặc đi ngang qua đã sát hại vợ anh. Để chơi ác, chúng còn moi ruột chị vứt xuống sông khiến Cuội dù có lá thần cũng không cách nào cứu sống lại được vợ mình vì cơ thể không còn nguyên vẹn.</p>
+        <figure class="article-image">
+          <img src="chucuoi2.png" alt="Hình ảnh Chú Cuội">
+          <figcaption>Hình ảnh minh họa Sự tích Chú Cuội cung trăng</figcaption>
+        </figure>
+        <p>Thấy chủ khóc lóc thảm thiết bên xác vợ, con chó tinh khôn mà Cuội từng cứu đã tình nguyện hiến ruột mình để thay vào bụng bà chủ. Nhờ vậy, vợ Cuội sống lại, vẫn trẻ đẹp nhưng tính nết bắt đầu thay đổi, trở nên hay quên. Cuội dặn vợ tuyệt đối không được tưới nước bẩn vào phía Đông nơi trồng cây quý, nếu không cây sẽ bay lên trời, nhưng vì tính hay quên nên vợ anh đã vi phạm lời dặn.</p>
+        <p>Một buổi chiều, khi vừa tưới nước bẩn xong, mặt đất bỗng rung chuyển và cây quý lững thững bay lên. Đúng lúc Cuội đi rừng về, anh hốt hoảng nhảy bổ đến, dùng rìu móc vào rễ để níu cây lại. Nhưng sức cây quá mạnh, Cuội nhất quyết không buông tay nên đã bị cây kéo bay vút lên tận cung trăng. Từ đó, mỗi khi nhìn lên mặt trăng vào đêm rằm, người ta lại thấy bóng chú Cuội ngồi dưới gốc cây đa.</p>
+        <figure class="article-image">
+          <img src="chucuoi3.png" alt="Hình ảnh Chú Cuội">
+          <figcaption>Hình ảnh minh họa Sự tích Chú Cuội cung trăng</figcaption>
+        </figure>
+        <p>Nhìn lên mặt trăng, người ta thấy một vết đen rõ như hình một cây cổ thụ có người ngồi dưới gốc. Từ đó, người ta gọi cái hình ấy là chú Cuội ngồi gốc cây đa.</p>
+      </div>
+    </article>
+    
+    <!-- Phần bình luận -->
+    <section class="comment-section">
+      <h3>Bình luận bài viết</h3>
+      <form class="comment-form" id="comment-form" action="#" method="post" onsubmit="alert('Cảm ơn!');return false;">
+        <label for="name">Họ và tên</label>
+        <input id="name" name="name" type="text" required placeholder="Nhập họ tên">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="email@example.com">
+
+        <label for="message">Bình luận</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Viết bình luận..."></textarea>
+
+        <button type="submit" class="btn">Gửi bình luận</button>
+      </form>
+    </section>
+  </main>
+</div>
+<div class="container exit"><a href="Trangchu.html">← Quay lại trang chủ</a></div>
+
+<footer id="footer">
+      <div class="container footer-grid footer-email">
+      <div >
+        <h3>Thông tin nhóm</h3>
+        <p class="group">Nhóm: 4 - Tin Học 12A4| Giáo viên: Thầy Kháng</p>
+        <p class="group footer-email">Đại diện nhóm: <strong>Phạm Bảo Anh</strong> - email: <a href="mailto:baoanh210808@gmail.com">baoanh210808@gmail.com</a></p>
+      </div>
+
+      <div>
+        <h3>Cập nhật</h3>
+        <p class="group">Ngày cập nhật gần nhất: <time datetime="2026-01-18">18-01-2026</time></p>
+        <p class="group">Nguồn tham khảo: Truyền thuyết dân gian, sách báo, và Internet (nếu có trích dẫn cụ thể sẽ ghi rõ).</p>
+      </div>
+
+      <div>
+        <h3>Liên hệ</h3>
+        <form action="#" onsubmit="alert('Email của bạn đã được gửi đi!'); return false;">
+          <label class="group" for="email-footer">Email liên hệ</label>
+          <input id="email-footer" type="email" placeholder="email@nhom12a.edu.vn" required>
+          <button class="btn" type="submit">Gửi</button>
+        </form>
+      </div>
+    </div>
+  <div class="container Lmao">© 2026 TRĂNG RẰM - Lớp 12 Tin Học</div>
+</footer>
+
+</body>
+</html>

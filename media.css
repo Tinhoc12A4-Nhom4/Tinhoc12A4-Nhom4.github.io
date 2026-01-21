@@ -1,0 +1,77 @@
+
+.media-section {
+  margin: 30px 0;
+  padding: 20px;
+  background: var(--dark-red);
+  border-radius: 8px;
+  border: 1px solid var(--gold);
+}
+
+.media-section h2 {
+  color: var(--light-gold);
+  margin: 0 0 20px 0;
+  font-size: 1.5rem;
+}
+
+/* Danh sách audio - XẾP NGANG */
+.audio-list,
+.video-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+/* Mỗi item - Xếp từ trái qua phải */
+.audio-item,
+.video-item {
+  flex: 1 1 300px; /* Mỗi item rộng tối thiểu 300px */
+  max-width: 100%;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.audio-item h3,
+.video-item h3 {
+  color: var(--cream);
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.audio-item p,
+.video-item p {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 10px 0 0 0;
+  font-size: 0.9rem;
+}
+
+/* Audio và video player */
+audio,
+video {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.exit a {
+  color: #ffdca8;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.exit a:hover {
+  color: var(--gold);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .media-section {
+    padding: 15px;
+  }
+  
+  .audio-item,
+  .video-item {
+    flex: 1 1 100%; /* Trên mobile, mỗi item 1 hàng */
+  }
+}

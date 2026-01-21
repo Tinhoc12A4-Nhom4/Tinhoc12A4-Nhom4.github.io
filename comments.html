@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bình Luận - Trăng Việt</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="article.css">
+  <link rel="stylesheet" href="comments.css">
+  <style>
+    :root {
+      /* Màu sắc chính */
+      --primary-red: #5b0f0f;
+      --secondary-red: #8b1e1e;
+      --dark-red: #3b1212;
+      --darker-red: #2a0a0a;
+      --gold: #d39b2b;
+      --light-gold: #ffd27a;
+      --cream: #ffe9c9;
+      --white: #ffffff;
+  
+      /* Kích thước */
+      --spacing: 18px;
+      --border-radius: 8px;
+      --container-width: 1100px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--primary-red);
+      color: var(--white);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .layout {
+      display: flex;
+      gap: var(--spacing);
+      max-width: 1150px;
+      margin: var(--spacing) auto;
+      padding: 0 12px;
+      flex: 1;
+    }
+
+  </style>
+</head>
+<body>
+
+<header id="header">
+  <div class="container">
+    <div class="header-content">
+      <img src="Logo.jpg" alt="logo Trăng Việt" class="logo">
+      <div class="header-text">
+        <h1 class="brand">TRĂNG VIỆT</h1>
+        <p>Báo tường nhóm 4 - Lớp 12A4 Tin Học</p>
+      </div>
+    </div>
+    
+    <nav class="menu-ngang" aria-label="Chính">
+      <ul>
+        <li><a href="Trangchu.html">Trang chủ</a></li>
+         <li class="nav-dropdown">
+      <a href="#articles" class="nav-dropdown-toggle">
+        Bài viết
+      </a>
+      
+      <!-- Dropdown hướng xuống -->
+      <div class="nav-dropdown-menu">
+        <div class="nav-dropdown-inner">
+          <a href="Trangcon6.html" class="dropdown-item">
+            <span class="item-icon">📖</span>
+            <span class="item-text">
+              <strong>Sự tích chú Cuội</strong>
+              <small>Ý nghĩa và biến thể dân gian</small>
+            </span>
+          </a>
+
+          <a href="Trangcon1.html" class="dropdown-item">
+            <span class="item-icon">📖</span>
+            <span class="item-text">
+              <strong>Sự tích Chị Hằng Nga</strong>
+              <small>Công thức và cách bày trí</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon2.html" class="dropdown-item">
+            <span class="item-icon">🥮</span>
+            <span class="item-text">
+              <strong>Trung Thu ăn gì?</strong>
+              <small>Công thức và cách bày trí</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon3.html" class="dropdown-item">
+            <span class="item-icon">🏮</span>
+            <span class="item-text">
+              <strong>Làm đèn ông sao</strong>
+              <small>Hướng dẫn thủ công</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon5.html" class="dropdown-item">
+            <span class="item-icon">📜</span>
+            <span class="item-text">
+              <strong>Lịch sử Tết Trung Thu</strong>
+              <small>Nguồn gốc và ý nghĩa</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon4.html" class="dropdown-item">
+            <span class="item-icon">🎏</span>
+            <span class="item-text">
+              <strong>Lân sư rồng</strong>
+              <small>Bánh nướng, bánh dẻo, bánh hiện đại</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon7.html" class="dropdown-item">
+            <span class="item-icon">👑</span>
+            <span class="item-text">
+              <strong>Trung thu của hoàng đế</strong>
+              <small>Trò chơi truyền thống mùa Trung Thu</small>
+            </span>
+          </a>
+        </div>
+      </div>
+    </li>
+        <li><a href="gallery.html">Thư viện ảnh</a></li>
+        <li><a href="media.html">Âm nhạc/Video</a></li>
+        <li><a href="comments - Copy.html">Bình luận</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container breadcrumb">
+  <a href="Trangchu.html">Trang chủ</a> › 
+  <span>Bình luận</span>
+</div>
+
+<div class="container">
+  <div class="comment-layout">
+    
+    <!-- Cột trái: Form viết -->
+    <div class="comment-left">
+      <h3>Viết bình luận</h3>
+      <form class="comment-form">
+        <input type="text" placeholder="Tên của bạn" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Nội dung bình luận..." rows="6" required></textarea>
+        <button type="submit">Gửi bình luận</button>
+      </form>
+    </div>
+    
+    <!-- Cột phải: Danh sách -->
+    <div class="comment-right">
+      <h3>Bình luận trước đó</h3>
+      <div class="comment-list">
+        
+        <div class="comment-item">
+          <strong>Dương Gia Beo</strong> - <span>13/04/2025 • 14:30</span>
+          <p>Rất xinh đẹp, rất tuyệt vời! Trang web đẹp tôi rất thích nó😍😍</p>
+        </div>
+        
+        <div class="comment-item">
+          <strong>Trần Thị Thảo Thy</strong> - <span>12/7/943TCN • 20:15</span>
+          <p>Dù là người cổ đại tôi vẫn thấy xao xuyến trước các bài nhạc🐧</p>
+        </div>
+        
+        <div class="comment-item">
+          <strong>Phạm Bảo Em</strong> - <span>21/08/1999 • 09:45</span>
+          <p>Tôi yêu thích nhất là cái nền của trang web, ai có thể cho tôi xin link ảnh không?</p>
+        </div>
+        
+        <div class="comment-item">
+          <strong>Dương Trí Vỹ</strong> - <span>27/09/1963 • 16:20</span>
+          <p>Đèn lồng đẹp.</p>
+        </div>
+        
+        <div class="comment-item">
+          <strong>Giáo sư Tiếng Anh chuyên đào tạo B1</strong> - <span>06/01/2026 • 11:10</span>
+          <p>I love this site, even though I have a B1 degree, but I can't help but linger because of the beautiful layout and engaging content of the page</p>
+        </div>
+        
+        <div class="comment-item">
+          <strong>Rin Nanakura</strong> - <span>05/01/2024 • 19:30</span>
+          <p>Truyền thuyết thật sự rất hay</p>
+        </div>
+
+        <div class="comment-item">
+          <strong>Đỗ Đức Thang</strong> - <span>04/12/2025 • 13:45</span>
+          <p>Đang hết tháng tập gym, tự nhiên tìm được trang web giải trí quá!</p>
+        </div>
+
+        <div class="comment-item">
+          <strong>Trần Hà Phương</strong> - <span>03/05/2024 • 10:20</span>
+          <p>Ảnh chụp đoàn Lân - Sư - Rồng trông bắt lắm mọi người</p>
+        </div>
+
+        <div class="comment-item">
+          <strong>Độ Xiaomi</strong> - <span>29/11/2025 • 18:40</span>
+          <p>Biết từ gì không?</p>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="container exit"><a href="Trangchu.html">← Quay lại trang chủ</a></div>
+<footer id="footer">
+      <div class="container footer-grid footer-email">
+      <div >
+        <h3>Thông tin nhóm</h3>
+        <p class="group">Nhóm: 4 - Tin Học 12A4| Giáo viên: Thầy Kháng</p>
+        <p class="group footer-email">Đại diện nhóm: <strong>Phạm Bảo Anh</strong> - email: <a href="mailto:baoanh210808@gmail.com">baoanh210808@gmail.com</a></p>
+      </div>
+
+      <div>
+        <h3>Cập nhật</h3>
+        <p class="group">Ngày cập nhật gần nhất: <time datetime="2026-01-18">18-01-2026</time></p>
+        <p class="group">Nguồn tham khảo: Truyền thuyết dân gian, sách báo, và Internet (nếu có trích dẫn cụ thể sẽ ghi rõ).</p>
+      </div>
+
+      <div>
+        <h3>Liên hệ</h3>
+        <form action="#" onsubmit="alert('Email của bạn đã được gửi đi!'); return false;">
+          <label class="group" for="email-footer">Email liên hệ</label>
+          <input id="email-footer" type="email" placeholder="email@nhom12a.edu.vn" required>
+          <button class="btn" type="submit">Gửi</button>
+        </form>
+      </div>
+    </div>
+    <div class="container Lmao">© 2026 TRĂNG RẰM - Lớp 12 Tin Học</div>
+</footer>
+
+</body>
+</html>

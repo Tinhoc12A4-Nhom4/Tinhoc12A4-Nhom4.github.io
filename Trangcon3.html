@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Làm đèn ông sao - Trăng Việt</title>
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="article.css">
+  <style>
+    :root {
+      /* Màu sắc chính */
+      --primary-red: #5b0f0f;
+      --secondary-red: #8b1e1e;
+      --dark-red: #3b1212;
+      --darker-red: #2a0a0a;
+      --gold: #d39b2b;
+      --light-gold: #ffd27a;
+      --cream: #ffe9c9;
+      --white: #ffffff;
+  
+      /* Kích thước */
+      --spacing: 18px;
+      --border-radius: 8px;
+      --container-width: 1100px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--primary-red);
+      color: var(--white);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .layout {
+      display: flex;
+      gap: var(--spacing);
+      max-width: 1150px;
+      margin: var(--spacing) auto;
+      padding: 0 12px;
+      flex: 1;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Header đã sửa -->
+<header id="header">
+  <div class="container">
+    <div class="header-content">
+      <img src="Logo.jpg" alt="logo Trăng Việt" class="logo">
+      <div class="header-text">
+        <h1 class="brand">TRĂNG VIỆT</h1>
+        <p>Báo tường nhóm 4 - Lớp 12A4 Tin Học</p>
+      </div>
+    </div>
+    
+    <nav class="menu-ngang" aria-label="Chính">
+      <ul>
+        <li><a href="Trangchu.html">Trang chủ</a></li>
+         <li class="nav-dropdown">
+      <a href="#articles" class="nav-dropdown-toggle">
+        Bài viết
+      </a>
+      
+      <!-- Dropdown hướng xuống -->
+      <div class="nav-dropdown-menu">
+        <div class="nav-dropdown-inner">
+          <a href="Trangcon6.html" class="dropdown-item">
+            <span class="item-icon">📖</span>
+            <span class="item-text">
+              <strong>Sự tích chú Cuội</strong>
+              <small>Vì sao hằng đêm khi nhìn lên trăng...</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon2.html" class="dropdown-item">
+            <span class="item-icon">🥮</span>
+            <span class="item-text">
+              <strong>Trung Thu ăn gì?</strong>
+              <small>Những món ăn truyền thống và ý nghĩa...</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon1.html" class="dropdown-item">
+            <span class="item-icon">📖</span>
+            <span class="item-text">
+              <strong>Sự tích Chị Hằng Nga</strong>
+              <small>Hằng Nga tại sao lại ở cung trăng??</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon5.html" class="dropdown-item">
+            <span class="item-icon">📜</span>
+            <span class="item-text">
+              <strong>Lịch sử Tết Trung Thu</strong>
+              <small>Nguồn gốc và ý nghĩa</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon4.html" class="dropdown-item">
+            <span class="item-icon">🎏</span>
+            <span class="item-text">
+              <strong>Lân sư rồng</strong>
+              <small>Múa lân – sư – rồng là một trong những...</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon7.html" class="dropdown-item">
+            <span class="item-icon">👑</span>
+            <span class="item-text">
+              <strong>Trung thu của hoàng đế</strong>
+              <small>Mỗi dịp Trung thu, vua Càn Long thời Thanh...</small>
+            </span>
+          </a>
+        </div>
+      </div>
+    </li>
+        <li><a href="gallery.html">Thư viện ảnh</a></li>
+        <li><a href="media.html">Âm nhạc/Video</a></li>
+        <li><a href="comments.html">Bình luận</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Breadcrumb -->
+<div class="container breadcrumb">
+  <a href="Trangchu.html">Trang chủ</a> › 
+  <span>Làm đèn ông sao</span>
+</div>
+
+<!-- Main content -->
+<div class="layout">
+  <main class="main-article">
+    <article>
+      <header class="article-header">
+        <h1 class="article-title">Cách làm đèn ông sao đơn giản</h1>
+        <div class="article-meta">
+          <span> Ngày đăng: 10-01-2023</span>
+          <span> Tác giả: Con nhà ông T</span>
+          <span> Thời gian đọc: 5 phút</span>
+        </div>
+      </header>
+      
+      <div class="article-content">
+        <p>Tết Trung thu rước đèn đi chơi…”, câu hát ấy cứ mỗi độ trăng tròn tháng Tám lại vang lên, len lỏi vào từng con ngõ nhỏ, khơi dậy cả một bầu trời tuổi thơ của biết bao thế hệ người Việt. Chẳng ai trong chúng ta có thể quên được cái cảm giác nôn nao, háo hức khi được bố mẹ mua cho chiếc đèn ông sao năm cánh sặc sỡ, hay tự tay tỉ mẩn vót tre, dán giấy kiếng làm chiếc đèn lồng của riêng mình.</p>
+        <figure class="article-image">
+          <img src="longden1.png" alt="Hình ảnh Rước đèn">
+          <figcaption>Hình ảnh minh họa "Rước đèn"</figcaption>
+        </figure>
+        <p>Đèn lồng là biểu tượng quen thuộc và không thể thiếu trong mỗi mùa Trung Thu. Qua bao thế hệ, người Việt đã sáng tạo nên nhiều loại đèn mang đậm nét nghệ thuật dân gian, như đèn ông sao, đèn cá chép, đèn thỏ hay đèn kéo quân.</p>
+        <p>Những chiếc đèn được làm từ tre, giấy màu và giấy kính, qua bàn tay khéo léo của người thợ trở nên rực rỡ và tinh tế. Khi màn đêm buông xuống, trẻ em cầm đèn lồng đi rước dưới ánh trăng, tạo nên một khung cảnh lung linh, ấm áp và đầy hoài niệm.</p>
+        <h2>Cách làm đèn trung thu bằng giấy tại nhà dễ nhất</h2>
+        <p>Khám phá cách làm đèn trung thu bằng giấy A4 đơn giản, chỉ vài bước gấp cắt cơ bản là bạn có ngay chiếc lồng đèn xinh xắn.</p>
+        <p><b>Dụng cụ làm lồng đèn Ông sao:</b></p>
+        <p>- 10 thanh tre vót dẹp, mỏng, dài khoảng 50 cm/thanh (độ dài cần đều nhau).</p>
+        <p>- 5 thanh tre dẹp dài 8 cm/thanh.</p>
+        <p>- Hồ dán.</p>
+        <p>- Giấy kiếng màu bé yêu thích.</p>
+        <p>- Kéo, kềm, dây kẽm mỏng.</p>
+        <figure class="article-image">
+          <img src="longden2.png" alt="Hình ảnh dụng cụ">
+          <figcaption>Dụng cụ cần chuẩn bị để làm lồng đèn Ông sao</figcaption>
+        </figure>
+        <p><b>Các bước làm lồng đèn Ông sao đơn giản:</b></p>
+        <p><b>Bước 1:</b> Tạo khung hình ông sao</p>
+        <p>Nối 10 thanh tre dài đã chuẩn bị thành 2 hình ông sao 5 cánh, cố định các đầu nối bằng dây kẽm cho chắc chắn.</p>
+        <figure class="article-image">
+          <img src="longden3.png" alt="Hình ảnh dụng cụ">
+          <figcaption>Tạo khung hình ông sao</figcaption>
+        </figure>
+        <p>Chồng 2 ngôi sao lên nhau rồi tiếp tục cố định 5 đầu nhọn của 2 ngôi sao lại bằng dây kẽm</p>
+        <figure class="article-image">
+          <img src="longden4.png" alt="Hình ảnh dụng cụ">
+          <figcaption>Chồng 2 ngôi sao lên nhau</figcaption>
+        </figure>
+        <p>Dùng các đoạn tre ngắn chống vào các điểm giao nhau tạo thành hình ngũ giác ở giữa 2 ngôi sao để tạo khung xương hoàn chỉnh cho lồng đèn. Cố định chắc chắn các cây chống này để chúng không xê dịch khi dán giấy kiếng lên.</p>
+        <figure class="article-image">
+          <img src="longden5.png" alt="Hình ảnh dụng cụ">
+          <figcaption>Dùng các đoạn tre ngắn chống vào các điểm giao nhau</figcaption>
+        </figure>
+
+
+        <p><b>Bước 2:</b> Dán giấy kiếng cho lồng đèn</p>
+        <p>Trước tiên bôi hồ dán lên 2 mặt chính của ngôi sao (thực hiện từng mặt 1).</p>
+        <figure class="article-image">
+          <img src="longden6.png" alt="Hình ảnh dụng cụ">
+          <figcaption>Bôi hồ dán lên 2 mặt chính của lồng đèn sao</figcaption>
+        </figure>
+        <p>Cắt giấy kiếng to hơn phần cánh tam giác của ngôi sao rồi dán đè lên phần keo đã bôi trước đó. Để keo khô và cắt bỏ phần giấy thừa. Thực hiện lần lượt với các ô trống còn lại của khung đèn, chừa lại 2 ô đáy và 2 ô bên trên để châm đèn cầy cho lồng đèn và để thông khí.</p>
+
+        <figure class="article-image">
+          <img src="longden7.png" alt="Hình ảnh dụng cụ">
+          <figcaption>Dán giấy kiếng cho lồng đèn sao</figcaption>
+        </figure>
+        
+
+        <p><b>Bước 3:</b> Trang trí cho lồng đèn ngôi sao thêm sinh động</p>
+        <p>Tùy theo sở thích của bé mà bạn trang trí các họa tiết, hoa văn đa màu sắc cho lồng đèn trở nên bắt mắt và sinh động hơn.</p>
+        <figure class="article-image">
+          <img src="longden8.png" alt="Hình ảnh lồng đèn">
+          <figcaption>Trang trí cho lồng đèn ngôi sao thêm sinh động</figcaption>
+        </figure>
+
+        <p>Ba mẹ có thể dùng thêm giấy để cắt thành những hình thù ngộ nghĩnh, đáng yêu như ngôi sao, bông hoa, trái tim... để dán trên lồng đèn của bé.</p>
+        
+      </div>
+    </article>
+    
+    <!-- Phần bình luận -->
+    <section class="comment-section">
+      <h3>Bình luận bài viết</h3>
+      <form class="comment-form" id="comment-form" action="#" method="post" onsubmit="alert('Cảm ơn!');return false;">
+        <label for="name">Họ và tên</label>
+        <input id="name" name="name" type="text" required placeholder="Nhập họ tên">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="email@example.com">
+
+        <label for="message">Bình luận</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Viết bình luận..."></textarea>
+
+        <button type="submit" class="btn">Gửi bình luận</button>
+      </form>
+    </section>
+  </main>
+</div>
+<div class="container exit"><a href="Trangchu.html">← Quay lại trang chủ</a></div>
+
+<footer id="footer">
+      <div class="container footer-grid footer-email">
+      <div >
+        <h3>Thông tin nhóm</h3>
+        <p class="group">Nhóm: 4 - Tin Học 12A4| Giáo viên: Thầy Kháng</p>
+        <p class="group footer-email">Đại diện nhóm: <strong>Phạm Bảo Anh</strong> - email: <a href="mailto:baoanh210808@gmail.com">baoanh210808@gmail.com</a></p>
+      </div>
+
+      <div>
+        <h3>Cập nhật</h3>
+        <p class="group">Ngày cập nhật gần nhất: <time datetime="2026-01-18">18-01-2026</time></p>
+        <p class="group">Nguồn tham khảo: Truyền thuyết dân gian, sách báo, và Internet (nếu có trích dẫn cụ thể sẽ ghi rõ).</p>
+      </div>
+
+      <div>
+        <h3>Liên hệ</h3>
+        <form action="#" onsubmit="alert('Email của bạn đã được gửi đi!'); return false;">
+          <label class="group" for="email-footer">Email liên hệ</label>
+          <input id="email-footer" type="email" placeholder="email@nhom12a.edu.vn" required>
+          <button class="btn" type="submit">Gửi</button>
+        </form>
+      </div>
+    </div>
+  <div class="container Lmao">© 2026 TRĂNG RẰM - Lớp 12 Tin Học</div>
+</footer>
+
+</body>
+</html>

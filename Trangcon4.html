@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lân Sư Rồng - Trăng Việt</title>
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="article.css">
+  <style>
+    :root {
+      /* Màu sắc chính */
+      --primary-red: #5b0f0f;
+      --secondary-red: #8b1e1e;
+      --dark-red: #3b1212;
+      --darker-red: #2a0a0a;
+      --gold: #d39b2b;
+      --light-gold: #ffd27a;
+      --cream: #ffe9c9;
+      --white: #ffffff;
+  
+      /* Kích thước */
+      --spacing: 18px;
+      --border-radius: 8px;
+      --container-width: 1100px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--primary-red);
+      color: var(--white);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .layout {
+      display: flex;
+      gap: var(--spacing);
+      max-width: 1150px;
+      margin: var(--spacing) auto;
+      padding: 0 12px;
+      flex: 1;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Header đã sửa -->
+<header id="header">
+  <div class="container">
+    <div class="header-content">
+      <img src="Logo.jpg" alt="logo Trăng Việt" class="logo">
+      <div class="header-text">
+        <h1 class="brand">TRĂNG VIỆT</h1>
+        <p>Báo tường nhóm 4 - Lớp 12A4 Tin Học</p>
+      </div>
+    </div>
+    
+    <nav class="menu-ngang" aria-label="Chính">
+      <ul>
+        <li><a href="Trangchu.html">Trang chủ</a></li>
+         <li class="nav-dropdown">
+      <a href="#articles" class="nav-dropdown-toggle">
+        Bài viết
+      </a>
+      
+      <!-- Dropdown hướng xuống -->
+      <div class="nav-dropdown-menu">
+        <div class="nav-dropdown-inner">
+          <a href="Trangcon6.html" class="dropdown-item">
+            <span class="item-icon">📖</span>
+            <span class="item-text">
+              <strong>Sự tích chú Cuội</strong>
+              <small>Vì sao hằng đêm khi nhìn lên trăng...</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon2.html" class="dropdown-item">
+            <span class="item-icon">🥮</span>
+            <span class="item-text">
+              <strong>Trung Thu ăn gì?</strong>
+              <small>Những món ăn truyền thống và ý nghĩa...</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon3.html" class="dropdown-item">
+            <span class="item-icon">🏮</span>
+            <span class="item-text">
+              <strong>Làm đèn ông sao</strong>
+              <small>Hướng dẫn thủ công</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon5.html" class="dropdown-item">
+            <span class="item-icon">📜</span>
+            <span class="item-text">
+              <strong>Lịch sử Tết Trung Thu</strong>
+              <small>Nguồn gốc và ý nghĩa</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon1.html" class="dropdown-item">
+            <span class="item-icon">📖</span>
+            <span class="item-text">
+              <strong>Sự tích Chị Hằng</strong>
+              <small>Hằng Nga tại sao lại ở cung trăng??</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon7.html" class="dropdown-item">
+            <span class="item-icon">👑</span>
+            <span class="item-text">
+              <strong>Trung thu của hoàng đế</strong>
+              <small>Mỗi dịp Trung thu, vua Càn Long thời Thanh...</small>
+            </span>
+          </a>
+        </div>
+      </div>
+    </li>
+        <li><a href="gallery.html">Thư viện ảnh</a></li>
+        <li><a href="media.html">Âm nhạc/Video</a></li>
+        <li><a href="comments.html">Bình luận</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Breadcrumb -->
+<div class="container breadcrumb">
+  <a href="Trangchu.html">Trang chủ</a> › 
+  <span>Lân Sư Rồng</span>
+</div>
+
+<!-- Main content -->
+<div class="layout">
+  <main class="main-article">
+    <article>
+      <header class="article-header">
+        <h1 class="article-title">Lân Sư Rồng: Từ truyền thuyết đến hành trình di sản văn hóa</h1>
+        <div class="article-meta">
+          <span> Ngày đăng: 12-7-2024</span>
+          <span> Tác giả: ông Thổ Địa</span>
+          <span> Thời gian đọc: 67 phút</span>
+        </div>
+      </header>
+      
+      <div class="article-content">
+        <h2>1. Sự tích múa lân và ông Thổ Địa</h2>
+        <p>Tương truyền rằng, vị thần Thổ Địa ban phước sự giàu có, trù phú chứ không làm hại ai. Ông dụ con Kỳ Lân xuống trần gian, vào lãnh địa của mình để giúp đời khiến muôn dân hưởng thái bình, làm ăn khấm khá. Cứ tới mùa Trung thu đoàn viên, con Lân theo sau, ông Địa đi trước phe phẩy quạt mo, tươi cười hớn hở nhộn nhịp ban phước lộc cho buôn làng.</p>
+        <figure class="article-image">
+          <img src="mualan1.png" alt="Hình ảnh Sự tích múa lân">
+          <figcaption>Hình ảnh minh họa Sự tích múa lân và ông Thổ Địa</figcaption>
+        </figure>
+        <h2>2. Múa lân – sư – rồng: Âm vang rộn ràng của ngày hội</h2>
+        <p>Múa lân – sư – rồng là một trong những loại hình nghệ thuật dân gian đặc sắc, gắn liền với không khí lễ hội truyền thống, đặc biệt là Tết Trung Thu. Khi đêm rằm tháng Tám về, tiếng trống lân vang lên rộn ràng khắp phố phường, báo hiệu một mùa trăng tròn đầy niềm vui.</p>
+        <figure class="article-image">
+          <img src="mualan2.png" alt="Hình ảnh múa lân">
+          <figcaption>Hình ảnh minh họa múa lân</figcaption>
+        </figure>
+        <p>Đám múa Lân thường gồm một người đội chiếc đầu Lân to sặc sỡ, múa những điệu bộ của Lân theo nhịp trống. Đầu Lân trước kia được làm bằng giấy, sau này được thiết kế tỉ mỉ hơn với vải dệt, lông trang trí kim tuyến, đôi mắt có thể chớp động… Đuôi Lân dài làm bằng vải màu, do một người cầm phất phất theo nhịp múa Lân. Ngoài ra, đội múa Lân còn có người dùng trống thanh la, não bạt, đèn màu, cờ ngũ sắc, người cầm côn đi hộ vệ đầu Lân, và không thể thiếu ông Địa.</p>
+        <figure class="article-image">
+          <img src="mualan3.png" alt="Hình ảnh múa lân">
+          <img src="mualan4.png" alt="Hình ảnh múa lân">
+          <figcaption>Hình ảnh minh họa múa lân</figcaption>
+        </figure>
+
+        <p>Hình ảnh những chú lân uyển chuyển, mạnh mẽ không chỉ mang đến sự sôi động mà còn tượng trưng cho may mắn, thịnh vượng và bình an. Đối với trẻ em, múa lân là khoảnh khắc được mong chờ nhất, góp phần tạo nên một Trung Thu sống động, náo nhiệt và khó quên.</p>
+        <figure class="article-image">
+          <img src="mualan5.png" alt="Hình ảnh múa lân">
+          <figcaption>Hình ảnh minh họa múa lân</figcaption>
+        </figure>
+        <h2>3. Nghệ thuật Lân Sư Rồng là Di sản văn hóa phi vật thể quốc gia</h2>
+        <p>Đại diện Sở Văn hóa và Thể thao tổ chức lễ công bố tại Nhà hát thành phố, ngày 30/3. Từ tháng 8/2024, UBND TP HCM gửi văn bản đề nghị Bộ Văn hóa, Thể thao và Du lịch, xem xét đưa nghệ thuật lân sư rồng vào danh mục Di sản văn hóa phi vật thể quốc gia. Theo cơ quan quản lý, múa lân sư rồng là hình thức trình diễn đặc trưng, phản ánh hiện thực đời sống của cộng đồng người Hoa tại thành phố.</p>
+        <figure class="article-image">
+          <img src="mualan6.png" alt="Hình ảnh múa lân">
+          <figcaption>Hình ảnh trao giấy chứng nhận nghệ thuật lân sư rồng của người Hoa ở TP.HCM vào danh mục Di sản văn hóa phi vật thể quốc gia</figcaption>
+        </figure>
+        
+      </div>
+    </article>
+    
+    <!-- Phần bình luận -->
+    <section class="comment-section">
+      <h3>Bình luận bài viết</h3>
+      <form class="comment-form" id="comment-form" action="#" method="post" onsubmit="alert('Cảm ơn!');return false;">
+        <label for="name">Họ và tên</label>
+        <input id="name" name="name" type="text" required placeholder="Nhập họ tên">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required placeholder="email@example.com">
+
+        <label for="message">Bình luận</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Viết bình luận..."></textarea>
+
+        <button type="submit" class="btn">Gửi bình luận</button>
+      </form>
+    </section>
+  </main>
+</div>
+<div class="container exit"><a href="Trangchu.html">← Quay lại trang chủ</a></div>
+
+<footer id="footer">
+      <div class="container footer-grid footer-email">
+      <div >
+        <h3>Thông tin nhóm</h3>
+        <p class="group">Nhóm: 4 - Tin Học 12A4| Giáo viên: Thầy Kháng</p>
+        <p class="group footer-email">Đại diện nhóm: <strong>Phạm Bảo Anh</strong> - email: <a href="mailto:baoanh210808@gmail.com">baoanh210808@gmail.com</a></p>
+      </div>
+
+      <div>
+        <h3>Cập nhật</h3>
+        <p class="group">Ngày cập nhật gần nhất: <time datetime="2026-01-18">18-01-2026</time></p>
+        <p class="group">Nguồn tham khảo: Truyền thuyết dân gian, sách báo, và Internet (nếu có trích dẫn cụ thể sẽ ghi rõ).</p>
+      </div>
+
+      <div>
+        <h3>Liên hệ</h3>
+        <form action="#" onsubmit="alert('Email của bạn đã được gửi đi!'); return false;">
+          <label class="group" for="email-footer">Email liên hệ</label>
+          <input id="email-footer" type="email" placeholder="email@nhom12a.edu.vn" required>
+          <button class="btn" type="submit">Gửi</button>
+        </form>
+      </div>
+    </div>
+  <div class="container Lmao">© 2026 TRĂNG RẰM - Lớp 12 Tin Học</div>
+</footer>
+
+</body>
+</html>

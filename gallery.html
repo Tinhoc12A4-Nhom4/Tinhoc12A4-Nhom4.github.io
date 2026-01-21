@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Thư viện Ảnh - Trăng Việt</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="article.css">
+  <link rel="stylesheet" href="gallery.css">
+  <style>
+    :root {
+      /* Màu sắc chính */
+      --primary-red: #5b0f0f;
+      --secondary-red: #8b1e1e;
+      --dark-red: #3b1212;
+      --darker-red: #2a0a0a;
+      --gold: #d39b2b;
+      --light-gold: #ffd27a;
+      --cream: #ffe9c9;
+      --white: #ffffff;
+  
+      /* Kích thước */
+      --spacing: 18px;
+      --border-radius: 8px;
+      --container-width: 1100px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--primary-red);
+      color: var(--white);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .layout {
+      display: flex;
+      gap: var(--spacing);
+      max-width: 1150px;
+      margin: var(--spacing) auto;
+      padding: 0 12px;
+      flex: 1;
+    }
+
+  </style>
+</head>
+<body>
+
+<header id="header">
+  <div class="container">
+    <div class="header-content">
+      <img src="Logo.jpg" alt="logo Trăng Việt" class="logo">
+      <div class="header-text">
+        <h1 class="brand">TRĂNG VIỆT</h1>
+        <p>Báo tường nhóm 4 - Lớp 12A4 Tin Học</p>
+      </div>
+    </div>
+    
+    <nav class="menu-ngang" aria-label="Chính">
+      <ul>
+        <li><a href="Trangchu.html">Trang chủ</a></li>
+         <li class="nav-dropdown">
+      <a href="#articles" class="nav-dropdown-toggle">
+        Bài viết
+      </a>
+      
+      <!-- Dropdown hướng xuống -->
+      <div class="nav-dropdown-menu">
+        <div class="nav-dropdown-inner">
+          <a href="Trangcon6.html" class="dropdown-item">
+            <span class="item-icon">📖</span>
+            <span class="item-text">
+              <strong>Sự tích chú Cuội</strong>
+              <small>Ý nghĩa và biến thể dân gian</small>
+            </span>
+          </a>
+
+          <a href="Trangcon1.html" class="dropdown-item">
+            <span class="item-icon">📖</span>
+            <span class="item-text">
+              <strong>Sự tích Chị Hằng Nga</strong>
+              <small>Công thức và cách bày trí</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon2.html" class="dropdown-item">
+            <span class="item-icon">🥮</span>
+            <span class="item-text">
+              <strong>Trung Thu ăn gì?</strong>
+              <small>Công thức và cách bày trí</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon3.html" class="dropdown-item">
+            <span class="item-icon">🏮</span>
+            <span class="item-text">
+              <strong>Làm đèn ông sao</strong>
+              <small>Hướng dẫn thủ công</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon5.html" class="dropdown-item">
+            <span class="item-icon">📜</span>
+            <span class="item-text">
+              <strong>Lịch sử Tết Trung Thu</strong>
+              <small>Nguồn gốc và ý nghĩa</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon4.html" class="dropdown-item">
+            <span class="item-icon">🎏</span>
+            <span class="item-text">
+              <strong>Lân sư rồng</strong>
+              <small>Bánh nướng, bánh dẻo, bánh hiện đại</small>
+            </span>
+          </a>
+          
+          <a href="Trangcon7.html" class="dropdown-item">
+            <span class="item-icon">👑</span>
+            <span class="item-text">
+              <strong>Trung thu của hoàng đế</strong>
+              <small>Trò chơi truyền thống mùa Trung Thu</small>
+            </span>
+          </a>
+        </div>
+      </div>
+    </li>
+        <li><a href="gallery.html">Thư viện ảnh</a></li>
+        <li><a href="media.html">Âm nhạc/Video</a></li>
+        <li><a href="comments.html">Bình luận</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container breadcrumb">
+  <a href="Trangchu.html">Trang chủ</a> › 
+  <span>Thư viện ảnh</span>
+</div>
+
+<div class="container">
+  <main>
+    <h2 class="gallery-title">Thư viện ảnh Trung Thu</h2>
+    <p class="gallery-desc">Tổng hợp các hình ảnh đẹp về Trung Thu</p>
+    
+    <div class="photo-grid">
+      <!-- Mỗi ảnh -->
+      <div class="photo-item">
+        <img src="gallery1.jpg" alt="Đèn lồng">
+        <p class="photo-caption">Đèn lồng truyền thống</p>
+      </div>
+      
+      <div class="photo-item">
+        <img src="monan1.jpg" alt="Bánh Trung Thu">
+        <p class="photo-caption">Bánh Trung Thu</p>
+      </div>
+      
+      <div class="photo-item">
+        <img src="gallery3.jpg" alt="Trăng rằm">
+        <p class="photo-caption">Trăng rằm tháng 8</p>
+      </div>
+      
+      <div class="photo-item">
+        <img src="gallery4.jpg" alt="Mâm cỗ đoàn viên">
+        <p class="photo-caption">Mâm cỗ đoàn viên</p>
+      </div>
+      
+      <div class="photo-item">
+        <img src="hangnga1.png" alt="Hình ảnh Hậu Nghệ">
+        <p class="photo-caption">Hình ảnh Hậu Nghệ</p>
+      </div>
+      
+      <div class="photo-item">
+        <img src="hangnga3.png" alt="Chị Hằng Nga">
+        <p class="photo-caption">Chị Hằng Nga</p>
+      </div>
+
+      <div class="photo-item">
+        <img src="hangnga.png" alt="Chị Hằng Nga">
+        <p class="photo-caption">Chị Hằng Nga</p>
+      </div>
+      
+      <div class="photo-item">
+        <img src="longden1.png" alt="Múa lân và lồng đèn">
+        <p class="photo-caption">Múa lân và lồng đèn</p>
+      </div>
+      
+      <div class="photo-item">
+        <img src="longden2.png" alt="Dụng cụ">
+        <p class="photo-caption">Dụng cụ</p>
+      </div>
+      
+      <div class="photo-item">
+        <img src="monan2.jpg" alt="Bánh Trung Thu">
+        <p class="photo-caption">Bánh Trung Thu</p>
+      </div>
+      
+      <div class="photo-item">
+        <img src="longden4.png" alt="Dụng cụ">
+        <p class="photo-caption">Dụng cụ</p>
+      </div>
+      
+      <div class="photo-item">
+        <img src="monan4.jpg" alt="Mâm cỗ đoàn viên">
+        <p class="photo-caption">Trang trí mâm cỗ</p>
+      </div>
+
+      <div class="photo-item">
+        <img src="gallery5.jpg" alt="Lồng đèn">
+        <p class="photo-caption">Lồng đèn</p>
+      </div>
+      
+      <div class="photo-item">
+        <img src="longden7.png" alt="Dụng cụ">
+        <p class="photo-caption">Dụng cụ</p>
+      </div>
+      
+      <div class="photo-item">
+        <img src="longden8.png" alt="Lồng đèn ông sao">
+        <p class="photo-caption">Lồng đèn ông sao</p>
+      </div>
+      
+      <div class="photo-item">
+        <img src="mualan1.png" alt="Múa lân">
+        <p class="photo-caption">Con Lân và Ông Địa</p>
+      </div>
+      
+      <div class="photo-item">
+        <img src="mualan2.png" alt="Múa lân">
+        <p class="photo-caption">Múa lân</p>
+      </div>
+      
+      <div class="photo-item">
+        <img src="mualan3.png" alt="Múa lân">
+        <p class="photo-caption">Múa lân</p>
+      </div>
+      
+      <div class="photo-item">
+        <img src="mualan4.png" alt="Múa lân">
+        <p class="photo-caption">Múa lân</p>
+      </div>
+      
+      <div class="photo-item">
+        <img src="mualan5.png" alt="Múa lân">
+        <p class="photo-caption">Múa lân</p>
+      </div>
+      <!-- Thêm bao nhiêu ảnh tùy thích -->
+    </div>
+  </main>
+</div>
+<div class="container exit"><a href="Trangchu.html">← Quay lại trang chủ</a></div>
+<footer id="footer">
+      <div class="container footer-grid footer-email">
+      <div >
+        <h3>Thông tin nhóm</h3>
+        <p class="group">Nhóm: 4 - Tin Học 12A4| Giáo viên: Thầy Kháng</p>
+        <p class="group footer-email">Đại diện nhóm: <strong>Phạm Bảo Anh</strong> - email: <a href="mailto:baoanh210808@gmail.com">baoanh210808@gmail.com</a></p>
+      </div>
+
+      <div>
+        <h3>Cập nhật</h3>
+        <p class="group">Ngày cập nhật gần nhất: <time datetime="2026-01-18">18-01-2026</time></p>
+        <p class="group">Nguồn tham khảo: Truyền thuyết dân gian, sách báo, và Internet (nếu có trích dẫn cụ thể sẽ ghi rõ).</p>
+      </div>
+
+      <div>
+        <h3>Liên hệ</h3>
+        <form action="#" onsubmit="alert('Email của bạn đã được gửi đi!'); return false;">
+          <label class="group" for="email-footer">Email liên hệ</label>
+          <input id="email-footer" type="email" placeholder="email@nhom12a.edu.vn" required>
+          <button class="btn" type="submit">Gửi</button>
+        </form>
+      </div>
+    </div>
+    <div class="container Lmao">© 2026 TRĂNG RẰM - Lớp 12 Tin Học</div>
+</footer>
+
+</body>
+</html>
