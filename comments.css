@@ -12,7 +12,7 @@
 
 /* Cột trái - Form */
 .comment-left {
-  width: 1000px;
+  width: 100%;
   flex: 1;
   background: var(--dark-red);
   padding: 20px;
@@ -131,4 +131,5 @@
 .exit a:hover {
   color: var(--gold);
   text-decoration: underline;
+
 }
